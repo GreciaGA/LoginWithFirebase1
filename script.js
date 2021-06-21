@@ -61,6 +61,7 @@ loginUser.addEventListener('click',()=>{
     const password = document.getElementById("password").value; 
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
+        // loginUser.reset();
         // Signed in
     })
     .catch((error) => {
@@ -113,7 +114,7 @@ btnLoginFacebook.addEventListener('click', e => {
         
         console.log(result);
         console.log("logueado con facebook");
-        loginUser.reset();
+        // loginUser.reset();
     })
     .catch((error) => {
         console.log(error);
@@ -129,7 +130,7 @@ btnLoginGoogle.addEventListener('click', e => {
     firebase.auth().signInWithPopup(provider)
     .then((result) => {
         console.log(result);
-        loginUser.reset();
+        // loginUser.reset();
         console.log("logueado con google");
     })
     .catch((error) => {
