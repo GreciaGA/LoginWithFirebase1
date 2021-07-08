@@ -45,7 +45,7 @@ btnLogin.addEventListener('click', ()=>{
         promise
             .then(user => console.log(email + " Te logueaste correctamente"))
             .catch(e => alert(e.message));
-    // window.location.href = "mimuro.html";
+  
 })
 
 
