@@ -81,7 +81,7 @@ firebase.auth().onAuthStateChanged(function(user){
   }
 });
 
-
+// LOGIN CON FACEBOOK
 btnFacebook.addEventListener('click', ()=>{
 
   const provider = new firebase.auth.FacebookAuthProvider();
@@ -97,3 +97,21 @@ btnFacebook.addEventListener('click', ()=>{
   });
 })
 
+
+const btnGoogle = document.getElementById('btnGoogle');
+
+// LOGIN CON GOOGLE
+btnGoogle.addEventListener('click', ()=>{
+
+  const provider = new firebase.auth.GoogleAuthProvider();
+  firebase
+  .auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+    console.log(result);
+    console.log("logueado con GOOGLE");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+})
